@@ -13,7 +13,7 @@ vdd 1 0 2.5
 x1 in out 1 inv
 c1 out 0 30f
 
-.tran 0.25n 400n
+.tran 0.1n 400n
 .end
 
 * down: 1.000138e-07[413] - 9.990000e-08[407] = 1.138e-10
