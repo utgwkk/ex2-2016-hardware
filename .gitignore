@@ -2,3 +2,5 @@ logic.cir
 mos_model3
 *.txt
 *.ps
+__pycache__/
+venv/
