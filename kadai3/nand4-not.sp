@@ -2,28 +2,27 @@
 .include logic.cir
 .options post temp=27
 
-v1 in1 0 pwl (0.0n 0.0
-+             1.9n 0.0
-+             2.0n 2.5
-+             9.9n 2.5
-+            10.0n 0.0)
-v2 in2 0 pwl (0.0n 0.0
-+             2.9n 0.0
-+             3.0n 2.5)
-v3 in3 0 pwl (0.0n 0.0
-+             3.9n 0.0
-+             4.0n 2.5)
 v4 in4 0 pwl (0.0n 0.0
-+             4.9n 0.0
-+             5.0n 2.5)
++             0.49n 0.0
++             0.5n 2.5
++             3.99n 2.5
++             4.0n 0.0)
+v1 in1 0 pwl (0.0n 0.0)
+v2 in2 0 pwl (0.0n 0.0)
+v3 in3 0 pwl (0.0n 0.0)
 vdd 1 0 2.5
 
-x4nand in1 in2 in3 in4 2 1 nand4
+xinnot1 in1 in_not1 1 inv
+xinnot2 in2 in_not2 1 inv
+xinnot3 in3 in_not3 1 inv
+xinnot4 in4 in_not4 1 inv
+
+x4nand in_not1 in_not2 in_not3 in_not4 2 1 nand4
 xnot 2 out 1 inv
 c1 out 0 500f
 
-.tran 0.0005n 20n
+.tran 0.0001n 10n
 .end
 
-* down: 5.013750e-09 - 4.900000e-09 = 1.1375e-10
-* up: 1.003025e-08 - 9.900000e-09 = 1.3025e-10
+* down: 0.795050e-09 0.834250e-09 0.872450e-09 0.908450e-09
+* up: 0.906750e-09 0.920950e-09 0.931450e-09 0.940150e-09
