@@ -1,4 +1,4 @@
-* kadai2-2 2inv
+* kadai2-2 3inv
 .include logic.cir
 .options post temp=27
 
@@ -13,9 +13,10 @@ vdd 1 0 2.5
 x1 in out 1 inv
 x2 out 0 1 inv
 x3 out 0 1 inv
+x4 out 0 1 inv
 
 .tran 0.0004n 2n
 .end
 
-* down: 0.533e-09 - 0.49e-09 = 0.0430e-09
-* up: 0.0486e-09
+* down: 0.0790 ns
+* up: 0.0946 ns
